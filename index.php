@@ -1,7 +1,5 @@
 <?php
-
-require 'functions/get_magic_quotes_gpc.php';
-require 'pdo/db_connect.php';
+include 'includes/magicquotes.inc.php';
 
 //
 if (isset($_GET['addNewBook'])) {
@@ -10,6 +8,7 @@ if (isset($_GET['addNewBook'])) {
 }
 
 if (isset($_POST['bookName'])) {
+    include 'includes/db_connect.php';
     try {
         $sql = 'INSERT INTO books set
     bookName = :bookName,
@@ -31,6 +30,7 @@ if (isset($_POST['bookName'])) {
 }
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
+include 'includes/db_connect.php';
 try {
     $sql = 'SELECT
               books.id, bookName, nameFirst, nameLast

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<?php include_once 'includes/helpers.inc.php' ?>
 <head>
     <meta charset="utf-8">
     <title>books</title>
@@ -16,10 +16,11 @@
     <div class="book_example">
         <form action="?deleteBook" method="post">
             <p>
-                <?= htmlspecialchars($book['bookName'], ENT_QUOTES, 'UTF-8') ?>
-                penned by <i><?= $book['nameFirst']." ". $book['nameLast']?></i>
+                <? htmlout($book['bookName']) ?>
+                penned by
+                <i><? htmlout($book['nameFirst']." ". $book['nameLast'])?></i>
             </p>
-            <input type="hidden" name="id" value="<?= $book['id'] ?>">
+            <input type="hidden" name="id" value="<?= htmlout($book['id']) ?>">
             <input type="submit" value="Удалить">
 
     </form>
@@ -29,6 +30,7 @@
     </tr>
 </table>
     </div>
+
 </body>
 
 </html>
