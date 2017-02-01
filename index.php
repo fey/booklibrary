@@ -1,7 +1,7 @@
 <?php
 
 require 'functions/get_magic_quotes_gpc.php';
-require 'pdo/db_connect.php.php';
+require 'pdo/db_connect.php';
 
 //
 if (isset($_GET['addNewBook'])) {
