@@ -5,7 +5,8 @@
         <input type="text" name="bookName" value="Название книги">
         <br>
         <p>Имя автора</p>
-        <input type="text" name="authorName" value="Имя автора">
+        <input type="text" name="nameFirst" value="nameFirst">
+        <input type="text" name="NameLast" value="nameFirst">
         <p>Дата прочтения</p>
         <input type="date" name="readDate" value="<?= date('Y-m-d') ?>">
     </fieldset>

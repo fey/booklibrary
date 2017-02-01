@@ -16,10 +16,8 @@
     <div class="book_example">
         <form action="?deleteBook" method="post">
             <p>
-                <!-- выводим элементы массива Книга без id -->
-                <? foreach(array_slice($book, 1) as $bookAttributes): ?>
-                <?= $bookAttributes ?>
-                <? endforeach ?>
+                <?= htmlspecialchars($book['bookName'], ENT_QUOTES, 'UTF-8') ?>
+                penned by <i><?= $book['nameFirst']." ". $book['nameLast']?></i>
             </p>
             <input type="hidden" name="id" value="<?= $book['id'] ?>">
             <input type="submit" value="Удалить">
