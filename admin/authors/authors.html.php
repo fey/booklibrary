@@ -19,7 +19,7 @@
                 <div>
                     <?php htmlout($author['nameFirst'] . " " . $author['nameLast']) ?>
 
-                    <input type="hidden" name="action" value="<?= $author['id'] ?>">
+                    <input type="hidden" name="id" value="<?= $author['id'] ?>">
                     <input type="submit" name="action" value="Редактировать">
                     <input type="submit" name="action" value="Удалить">
                 </div>
