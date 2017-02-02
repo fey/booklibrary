@@ -17,6 +17,7 @@ if (isset($_GET['add']))
 
 if (isset($_GET['addform']))
 {
+  include '../../includes/db_connect.php';
     try {
         $sql = 'INSERT INTO author SET
        nameFirst = :nameFirst,
@@ -38,6 +39,7 @@ if (isset($_GET['addform']))
 /////// Редактирование автора
 if (isset($_POST['action']) and $_POST['action'] === 'Редактировать')
 {
+    include '../../includes/db_connect.php';
     try {
         $sql = 'SELECT id, nameFirst, nameLast FROM author WHERE id = :id';
         $s = $pdo->prepare($sql);
@@ -55,6 +57,7 @@ if (isset($_POST['action']) and $_POST['action'] === 'Редактировать
     $nameLast  = $row['nameLast'];
     $id        = $row['id'];
     $button    = 'Обновить информацию об авторе';
+
     include 'form.html.php';
     exit();
 
@@ -92,7 +95,7 @@ if (isset($_POST['action']) and $_POST['action'] === 'Удалить')
 {
 
 //получаем книги, принадлежащие автору    # code...
-
+    include '../../includes/db_connect.php';
     try
     {
         $sql = 'SELECT id FROM books WHERE authorid = :id';
@@ -155,6 +158,7 @@ if (isset($_POST['action']) and $_POST['action'] === 'Удалить')
 
 
 // Вывод списка авторов
+include '../../includes/db_connect.php';
 try
 {
     $result = $pdo->query('SELECT id, nameFirst, nameLast FROM author');

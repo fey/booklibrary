@@ -13,7 +13,7 @@
     <h1>
       <?php htmlout($pageTitle); ?>
     </h1>
-    <form class="" action="<?php htmlout($action) ?>" method="post">
+    <form class="" action="?<?php htmlout($action) ?>" method="post">
         <div>
             <label for="nameFirst">Имя: <input type="text" name="nameFirst" id="nameFirst" value="<?php htmlout($nameFirst) ?>"></label>
         </div>
