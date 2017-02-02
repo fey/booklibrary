@@ -6,21 +6,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Управление авторами</title>
+    <title>Управление жанрами</title>
 </head>
 
 <body>
-    <h1>Управление авторами</h1>
+    <h1>Управление жанрами</h1>
     <a href="../">Назад</a>
-    <p><a href="?add">Добавить нового автора</a></p>
+    <p><a href="?add">Добавить новый жанр</a></p>
     <ul>
-        <?php foreach($authors as $author): ?>
+        <?php foreach($genres as $genre): ?>
         <li>
             <form action="" method="post">
             <div>
-                <?php htmlout($author['nameFirst'] . " " . $author['nameLast']) ?>
+                <?php htmlout($genre['name']) ?>
 
-                <input type="hidden" name="id" value="<?= $author['id'] ?>">
+                <input type="hidden" name="id" value="<?= $genre['id'] ?>">
                 <input type="submit" name="action" value="Редактировать">
                 <input type="submit" name="action" value="Удалить">
             </div>
