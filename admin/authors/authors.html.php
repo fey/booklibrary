@@ -16,13 +16,13 @@
         <?php foreach($authors as $author): ?>
         <li>
             <form action="" method="post">
-                <div>
-                    <?php htmlout($author['nameFirst'] . " " . $author['nameLast']) ?>
+            <div>
+                <?php htmlout($author['nameFirst'] . " " . $author['nameLast']) ?>
 
-                    <input type="hidden" name="id" value="<?= $author['id'] ?>">
-                    <input type="submit" name="action" value="Редактировать">
-                    <input type="submit" name="action" value="Удалить">
-                </div>
+                <input type="hidden" name="id" value="<?= $author['id'] ?>">
+                <input type="submit" name="action" value="Редактировать">
+                <input type="submit" name="action" value="Удалить">
+            </div>
             </form>
         </li>
 

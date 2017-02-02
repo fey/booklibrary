@@ -1,6 +1,6 @@
 <?php
 include 'includes/magicquotes.inc.php';
-
+include 'includes/db_connect.php';
 //
 if (isset($_GET['addNewBook'])) {
     include 'form.inc.php';
@@ -13,13 +13,11 @@ if (isset($_POST['bookName'])) {
         $sql = 'INSERT INTO books set
     bookName = :bookName,
     nameFirst = :nameFirst,
-    nameLast = :nameLast,
-    readDate = :readDate';
+    nameLast = :nameLast';
         $s = $pdo->prepare($sql);
         $s->bindValue(':bookName', $_POST['bookName']);
         $s->bindValue(':nameLast', $_POST['nameLast']);
         $s->bindValue(':nameLast', $_POST['nameLast']);
-        $s->bindValue(':readDate', $_POST['readDate']);
         $s->execute();
     } catch (PDOException $e) {
         echo $error = 'Error adding submitted book:'.$e->getMessage();
@@ -30,7 +28,7 @@ if (isset($_POST['bookName'])) {
 }
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
-include 'includes/db_connect.php';
+
 try {
     $sql = 'SELECT
               books.id, bookName, nameFirst, nameLast
