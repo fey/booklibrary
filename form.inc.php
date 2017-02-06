@@ -1,4 +1,4 @@
-
+<!--
 
 <form name="addNewBook" class="form" action="?" method="post">
     <fieldset>
@@ -18,4 +18,4 @@
         <input type="submit" name="submit" value="Отправить">
 
     </fieldset>
-</form>
+</form> -->

@@ -9,19 +9,17 @@
 <body>
     <div class="books_list">
         <h2>All books:</h2>
-        <p><a href="?addNewBook">New Book</a>
 <table>
     <?php if(isset($book)) foreach ($book as $book): ?>
 <tr>
     <div class="book_example">
-        <form action="?deleteBook" method="post">
+        <form action="" method="get">
             <p>
                 <? htmlout($book['bookName']) ?>
                 penned by
                 <i><? htmlout($book['nameFirst']." ". $book['nameLast'])?></i>
             </p>
             <input type="hidden" name="id" value="<?= htmlout($book['id']) ?>">
-            <input type="submit" value="Удалить">
 
     </form>
     </div>

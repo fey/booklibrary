@@ -29,7 +29,7 @@ if (isset($_POST['bookName'])) {
 
 try {
     $sql = 'SELECT
-              books.id, bookName, authorid
+              books.id, bookName, nameFirst, nameLast
             FROM books
             INNER JOIN author
             ON authorid = author.id';
@@ -41,26 +41,11 @@ try {
 
 foreach ($result as $row) { // мы получили массив массивов,
                             // теперь каждая книга - массив
-    $book[] = array('id' => $row['id'],
+    $book[] = array(
+              'id' => $row['id'],
               'bookName' => $row['bookName'],
               'nameFirst'=> $row['nameFirst'],
               'nameLast' => $row['nameLast'],
-                  );
+          );
 }
-
-/////////////////////////////////////////////////
-/////////////////// УДАЛЕНИЕ КНИГИ
-if (isset($_GET['deleteBook'])) {
-    try {
-        $sql = 'DELETE FROM books WHERE id = :id';
-        $s = $pdo->prepare($sql);
-        $s->bindValue(':id', $_POST['id']);
-        $s->execute();
-    } catch (Exception $e) {
-        echo 'Ошибка при удалении книги'.$e->getMessage();
-        exit();
-    }
-    header('Location: .');
-}
-//////////////////////////////////////////
 include 'books.html.php';
