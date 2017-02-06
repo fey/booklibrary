@@ -11,13 +11,11 @@ if (isset($_POST['bookName'])) {
     include 'includes/db_connect.php';
     try {
         $sql = 'INSERT INTO books set
-    bookName = :bookName,
-    nameFirst = :nameFirst,
-    nameLast = :nameLast';
+                  bookName = :bookName,
+                  authorid = :authorid';
         $s = $pdo->prepare($sql);
         $s->bindValue(':bookName', $_POST['bookName']);
-        $s->bindValue(':nameLast', $_POST['nameLast']);
-        $s->bindValue(':nameLast', $_POST['nameLast']);
+        $s->bindValue(':authorid', $_POST['authorid']);
         $s->execute();
     } catch (PDOException $e) {
         echo $error = 'Error adding submitted book:'.$e->getMessage();
@@ -31,7 +29,7 @@ if (isset($_POST['bookName'])) {
 
 try {
     $sql = 'SELECT
-              books.id, bookName, nameFirst, nameLast
+              books.id, bookName, authorid
             FROM books
             INNER JOIN author
             ON authorid = author.id';

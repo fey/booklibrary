@@ -19,7 +19,7 @@
       </tr>
       <?php foreach($books as $book): ?>
       <tr>
-        <td><?php htmlout($book['text']) ?></td>
+        <td><?php htmlout($book['bookName']) ?></td>
         <td>
           <form class="" action="?" method="post">
             <div class="">

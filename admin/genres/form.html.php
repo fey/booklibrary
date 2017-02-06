@@ -16,7 +16,7 @@
     <form class="" action="?<?php htmlout($action) ?>" method="post">
       <div>
         <label for="name">Название:
-          <input id="name" type="text" name="name" value="<?php htmlout($nameFirst);?> ">
+          <input id="name" type="text" name="name" value="<?php htmlout($name);?> ">
         </label>
       </div>
       <div class="">

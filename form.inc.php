@@ -1,3 +1,5 @@
+
+
 <form name="addNewBook" class="form" action="?" method="post">
     <fieldset>
         <h2>Введите данные книги</h2>
@@ -5,8 +7,11 @@
         <input type="text" name="bookName" value="Название книги">
         <br>
         <p>Имя автора</p>
-        <input type="text" name="nameFirst" value="nameFirst">
-        <input type="text" name="NameLast" value="nameFirst">
+        <select class="" name="">
+          <?php foreach($authors as $author): ?>
+            <option value="<?php htmlout($author['id'])?>"><?php htmlout($author['nameFirst']) ?></option>
+          <?php endforeach; ?>
+        </select>
     </fieldset>
     <fieldset>
         <input type="reset" name="reset" value="Сброс">
