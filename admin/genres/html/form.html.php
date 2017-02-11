@@ -17,11 +17,11 @@
     <form class="" action="?<?php htmlout($action) ?>" method="post">
       <div>
         <label for="name"><p>Название:</p>
-          <input id="name" type="text" name="name" value="<?php htmlout($name);?> ">
+          <input id="name" type="text" name="name" value="<?php htmlout($genre['name']);?>">
         </label>
       </div>
       <div class="">
-            <input type="hidden" name="id" value="<?php htmlout($id) ?>">
+            <input type="hidden" name="id" value="<?php htmlout($genre['id']) ?>">
             <input type="submit" value="<?php htmlout($button) ?>">
         </div>
     </form>

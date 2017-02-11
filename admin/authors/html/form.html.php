@@ -16,15 +16,15 @@
     <a href="..">Назад</a>
     <form class="" action="?<?php htmlout($action) ?>" method="post">
         <div>
-            <label for="nameFirst"><p>Имя:</p> <input type="text" name="nameFirst" id="nameFirst" value="<?php htmlout($nameFirst) ?>"></label>
+            <label for="nameFirst"><p>Имя:</p> <input type="text" name="nameFirst" id="nameFirst" value="<?php htmlout($author['nameFirst']) ?>"></label>
         </div>
         <div>
             <label for="nameLast"><p>Фамилия:</p>
-              <input type="text" name="nameLast" id="nameLast" value="<?php htmlout($nameLast) ?>">
+              <input type="text" name="nameLast" id="nameLast" value="<?php htmlout($author['nameLast']) ?>">
             </label>
         </div>
         <div class="">
-            <input type="hidden" name="id" value="<?php htmlout($id) ?>">
+            <input type="hidden" name="id" value="<?php htmlout($author['id']) ?>">
             <input type="submit" value="<?php htmlout($button) ?>">
         </div>
     </form>
