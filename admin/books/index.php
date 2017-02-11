@@ -72,7 +72,6 @@ if(isset($_GET['addform']))
     exit();
   }
   $bookid = $pdo->lastInsertId();
-var_dump($bookid);
   if(isset($_POST['genres']))
   {
     try {

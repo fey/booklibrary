@@ -18,7 +18,7 @@
         <li>
             <form action="" method="post">
             <div>
-                <?php htmlout($genre['name']) ?>
+                <p><?php htmlout($genre['name']) ?></p>
 
                 <input type="hidden" name="id" value="<?= $genre['id'] ?>">
                 <input type="submit" name="action" value="Редактировать">

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/bookstore/includes/helpers.inc.php' ?>
+  <title><?php htmlout($page['title']) ?></title>
+</head>
+<body>
+  <a href="..">back</a>
+  <form class="" action="?<?php htmlout($action) ?>" method="post">
+    <input type="hidden" name="id">
+    <label for="">
+      <p>Имя пользователя</p>
+      <input type="text" name="name" placeholder="Login" autocomplete="off">
+    </label><label for="">
+      <p>Пароль:</p>
+      <input type="password" name="password" placeholder="Password" autocomplete="off">
+      <p>
+        <input type="submit" name="submit" value="<?php htmlout($button) ?>">
+      </p>
+    </label>
+  </form>
+
+
+</body>
+</html>

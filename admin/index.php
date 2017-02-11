@@ -14,5 +14,6 @@
     <li><a href="authors/">Управление авторами</a></li>
     <li><a href="genres/">Управление жанрами</a></li>
 </ul>
+<?php include 'user.html.php' ?>
 </body>
 </html>

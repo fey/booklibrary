@@ -29,6 +29,7 @@
       <div class="books_list">
           <h2>All books:</h2>
           <a href="admin/">admin</a>
+          <a href="auth/?new">register</a>
       <table>
       <?php if(isset($book)) foreach ($book as $book): ?>
       <tr>

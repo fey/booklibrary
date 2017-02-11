@@ -18,7 +18,8 @@
         <li>
             <form action="" method="post">
             <div>
-                <?php htmlout($author['nameFirst'] . " " . $author['nameLast']) ?>
+                <p><?php htmlout($author['nameFirst']) ?>
+                <?php htmlout($author['nameLast']) ?></p>
 
                 <input type="hidden" name="id" value="<?= $author['id'] ?>">
                 <input type="submit" name="action" value="Редактировать">
