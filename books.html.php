@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-<?php include_once 'includes/helpers.inc.php' ?>
+<?php
+include_once 'includes/helpers.inc.php';
+?>
 <head>
     <meta charset="utf-8">
     <title>books</title>
@@ -24,41 +26,45 @@
 </head>
 
 <body>
-
+<h1>All books:</h1>
+          <a href="admin/">Админка</a>
+          <a href="auth/?new">Регистрация</a>
     <div class="content">
       <div class="books_list">
-          <h2>All books:</h2>
-          <a href="admin/">admin</a>
-          <a href="auth/?new">register</a>
+
       <table>
-      <?php if(isset($book)) foreach ($book as $book): ?>
+      <?php
+if (isset($book))
+    foreach ($book as $book):
+?>
       <tr>
       <div class="book_example">
           <form action="" method="get">
               <p>
-                  <? htmlout($book['bookName']) ?>
+                  <? htmlout($book['bookName']); ?>
                   penned by
-                  <i><? htmlout($book['nameFirst']." ". $book['nameLast'])?></i>
+                  <i><? htmlout($book['nameFirst'] . " " . $book['nameLast']); ?></i>
               </p>
               <input type="hidden" name="id" value="<?= htmlout($book['id']) ?>">
-
-      </form>
+            </form>
       </div>
       <hr>
-      <?php endforeach ?>
+      <?php endforeach; ?>
       </tr>
       </table>
       </div>
       <div class="books_count">
+        
         <table>
           <tr>
             <th>Имя автора</th>
             <th>Количество книг</th>
           </tr>
-            <?php foreach($bookCounts as $author): ?>
+            <?php foreach ($bookCounts as $author): ?>
               <tr>
-                <td> <?php htmlout($author['nameFirst']) ?> <?php htmlout($author['nameLast']) ?> </td>
-                <td> <?php htmlout($author['sumbooks']) ?> </td>
+                <td> <?php htmlout($author['nameFirst']); ?>
+                  <?php htmlout($author['nameLast']); ?></td>
+                <td> <?php htmlout($author['sumbooks']); ?> </td>
               </tr>
             <?php endforeach; ?>
         </table>
