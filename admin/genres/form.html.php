@@ -13,6 +13,7 @@
     <h1>
       <?php htmlout($pageTitle); ?>
     </h1>
+    <a href="..">Назад</a>
     <form class="" action="?<?php htmlout($action) ?>" method="post">
       <div>
         <label for="name"><p>Название:</p>

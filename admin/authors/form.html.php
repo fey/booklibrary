@@ -13,7 +13,7 @@
     <h1>
       <?php htmlout($pageTitle); ?>
     </h1>
-    <a href="..">back</a>
+    <a href="..">Назад</a>
     <form class="" action="?<?php htmlout($action) ?>" method="post">
         <div>
             <label for="nameFirst"><p>Имя:</p> <input type="text" name="nameFirst" id="nameFirst" value="<?php htmlout($nameFirst) ?>"></label>

@@ -8,6 +8,8 @@
   <title><?php htmlout($pageTitle) ?></title>
 </head>
 <body>
+  <h1><?php htmlout($pageTitle) ?></h1>
+  <a href="..">назад</a>
 <form action="?<?php htmlout($action) ?>" method="post">
   <div class="">
     <label for="text">Введите название книги:</label>
