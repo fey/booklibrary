@@ -1,4 +1,5 @@
 <?php
+require $_SERVER['DOCUMENT_ROOT'] . '/bookstore/includes/db_connect.php';
     try {
       include ($_SERVER['DOCUMENT_ROOT'].'/bookstore/includes/db_connect.php');
       $result = $pdo->query('SELECT id, name FROM genres');

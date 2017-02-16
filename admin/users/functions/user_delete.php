@@ -3,7 +3,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/bookstore/includes/db_connect.php';
 if (isset($_POST['action']) and $_POST['action'] == 'Удалить') {
 
     try {
-        $sql = 'DELETE FROM bookgenres WHERE bookid = :id';
+        $sql = 'DELETE FROM user_roles WHERE userid = :id';
         $s   = $pdo->prepare($sql);
         $s->bindValue(':id', $_POST['id']);
         $s->execute();
@@ -16,7 +16,7 @@ if (isset($_POST['action']) and $_POST['action'] == 'Удалить') {
     // Удаление книги
 
     try {
-        $sql = 'DELETE FROM books WHERE id = :id';
+        $sql = 'DELETE FROM user WHERE id = :id';
         $s   = $pdo->prepare($sql);
         $s->bindValue(':id', $_POST['id']);
         $s->execute();
@@ -29,4 +29,18 @@ if (isset($_POST['action']) and $_POST['action'] == 'Удалить') {
     header('Location: .');
     exit();
 
+
+try {
+    $sql = 'DELETE FROM user WHERE id = :id';
+    $s = $pdo->prepare($sql);
+    $s->bindValue(':id', $_POST['id']);
+    $s->execute();
+}
+catch (Exception $e)
+{
+    echo 'Ошибка при удалении пользователя' . $e->getMessage();
+    exit();
+}
+header('Location: .');
+exit();
 }

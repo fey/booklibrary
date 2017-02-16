@@ -1,8 +1,6 @@
 <?php
 try {
-    $sql = 'SELECT
-              books.id, bookName, nameFirst, nameLast
-            FROM books
+    $sql = 'SELECT books.id, bookName, nameFirst, nameLast FROM books
             INNER JOIN author
             ON authorid = author.id';
     $result = $pdo->query($sql);

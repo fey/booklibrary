@@ -28,7 +28,7 @@ include_once 'includes/helpers.inc.php';
 <body>
 <h1>All books:</h1>
           <a href="admin/">Админка</a>
-          <a href="auth/?new">Регистрация</a>
+          <a href="auth">Вход</a>
     <div class="content">
       <div class="books_list">
 

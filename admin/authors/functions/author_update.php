@@ -1,4 +1,5 @@
 <?php
+require $_SERVER['DOCUMENT_ROOT'] . '/bookstore/includes/db_connect.php';
 if (isset($_POST['action']) and $_POST['action'] === 'Редактировать')
 {
     try {

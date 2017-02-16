@@ -1,4 +1,5 @@
 <?php
+require $_SERVER['DOCUMENT_ROOT'] . '/bookstore/includes/db_connect.php';
 if (isset($_GET['action']) and $_GET['action'] === 'search') {
     $select = 'SELECT id, bookName';
     $from   = ' FROM books';

@@ -1,6 +1,7 @@
 <?php
-include 'includes/magicquotes.inc.php';
-include 'includes/db_connect.php';
+require 'includes/magicquotes.inc.php';
+include 'includes/helpers.inc.php';
+require 'includes/db_connect.php';
 //
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
